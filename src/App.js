@@ -9,7 +9,7 @@ const NavBar = () => {
       <nav className="p-6 hidden sm:block">
         <span className="mr-8">
           <a
-            className="no-underline text-black text-lg font-semibold border-solid border-0 border-b-2 border-transparent hover:border-current"
+            className="no-underline text-white text-lg font-semibold border-solid border-0 border-b-2 border-transparent hover:border-current"
             href="/"
           >
             Works
@@ -17,7 +17,7 @@ const NavBar = () => {
         </span>
         <span className="mr-8">
           <a
-            className="no-underline text-black text-lg font-semibold border-solid border-0 border-b-2 border-transparent hover:border-current"
+            className="no-underline text-white text-lg font-semibold border-solid border-0 border-b-2 border-transparent hover:border-current"
             href="/"
           >
             Blog
@@ -25,7 +25,7 @@ const NavBar = () => {
         </span>
         <span className="mr-8">
           <a
-            className="no-underline text-black text-lg font-semibold border-solid border-0 border-b-2 border-transparent hover:border-current"
+            className="no-underline text-white text-lg font-semibold border-solid border-0 border-b-2 border-transparent hover:border-current"
             href="/"
           >
             Contact
@@ -41,7 +41,15 @@ const NavBar = () => {
 
 const Header = () => {
   return (
-    <header className="flex justify-end">
+    <header className="flex justify-between bg-black items-center">
+      <div className="text-white mx-10 my-6 flex items-center border-2 border-white border-solid">
+        <div className="bg-white pl-1">
+          <span className="text-2xl font-bold text-gray-900">Gray</span>
+        </div>
+        <div className="pr-1 pl-1">
+          <span className="text-2xl font-bold text-text">stack</span>
+        </div>
+      </div>
       <NavBar />
     </header>
   );
@@ -73,34 +81,33 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="flex mx-40 pt-36 pb-12">
+      <div className="flex px-40 pt-36 pb-12 bg-black">
         <div className="flex-1">
           <div className="py-6">
-            <div className="text-4xl font-bold py-1 text-center sm:text-left">
+            <div className="text-4xl font-bold py-1 text-center sm:text-left text-white">
               Hi, We are{" "}
               <span className="border-solid border-0 border-b-4">
                 Graystack
               </span>
               ,
             </div>
-            <div className="text-4xl font-bold py-1 text-center sm:text-left">
+            <div className="text-4xl font-bold py-1 text-center sm:text-left text-white">
               And some other awesome shit.
             </div>
           </div>
-          <div className="text-xl text-center sm:text-left">
+          <div className="text-xl text-center sm:text-left text-white">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do sint.
             officia consequat duis enim velit mollit. Exercitation veniam
             consequat sunt nostrud amet.
           </div>
           <div className="py-7 flex justify-center sm:justify-start">
-            <button className="bg-black text-white text-semibold py-1 px-4 text-lg focus:outline-none border-none">
+            <button className="bg-white text-black text-semibold py-1 px-4 text-lg focus:outline-none border-none">
               Contact Us
             </button>
           </div>
         </div>
         <div className="flex-1 hidden lg:block"></div>
       </div>
-      <div className="h-1 border-solid border-0 border-b border-gray-400" />
       <div className=" h-screen px-40 py-12">
         <div>
           <span className="text-xl font-bold border-solid border-0 border-b-4">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import CloseIcon from "./assets/CloseIcon";
 import FacebookIcon from "./assets/FacebookIcon";
 import LinkedInIcon from "./assets/LinkedInIcon";
+import MandalaArt from "./assets/MandalaArt";
 import MenuIcon from "./assets/MenuIcon";
 import TwitterIcon from "./assets/TwitterIcon";
 
@@ -167,9 +168,11 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="flex px-10 sm:px-40 pt-12 sm:pt-36 pb-12 bg-black">
+      <div className="flex items-center justify-between px-10 sm:px-40 pt-12 sm:py-16 pb-12 bg-black">
         <Banner />
-        <div className="flex-1 hidden lg:block"></div>
+        <div className="flex-1 hidden lg:flex justify-center">
+          <MandalaArt className="stroke-current stroke-1 text-white" />
+        </div>
       </div>
       <div className="px-10 sm:px-12 md:px-16 lg:px-40 py-12">
         <div>

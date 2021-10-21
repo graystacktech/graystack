@@ -5,6 +5,17 @@ import LinkedInIcon from "./assets/LinkedInIcon";
 import MenuIcon from "./assets/MenuIcon";
 import TwitterIcon from "./assets/TwitterIcon";
 
+const Pill = ({ label }) => {
+  return (
+    <span
+      className="rounded-full bg-gray-500 text-gray-100 px-2"
+      style={{ paddingTop: 2, paddingBottom: 2 }}
+    >
+      {label}
+    </span>
+  );
+};
+
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
@@ -103,7 +114,18 @@ const FeaturedWork = () => {
       <div className="w-56 h-56 bg-gray-200 rounded-lg flex-shrink-0" />
       <div className="pt-16 sm:pt-0 sm:px-16">
         <div className="text-lg font-semibold">Lorem ipsum dolor sit amet</div>
-        <div className="pt-4 pr-6">
+        <div className="mt-2 flex">
+          <div className="mx-1">
+            <Pill label="React" />
+          </div>
+          <div className="mx-1">
+            <Pill label="React Native" />
+          </div>
+          <div className="mx-1">
+            <Pill label="Tailwind" />
+          </div>
+        </div>
+        <div className="pt-6 pr-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           dapibus malesuada magna vitae viverra. Morbi eget blandit dui. Nullam
           non lectus est. Cras urna nulla, cursus id sapien a, dictum aliquam
@@ -133,7 +155,7 @@ const Banner = () => {
         sunt nostrud amet.
       </div>
       <div className="py-7 flex justify-center sm:justify-start">
-        <button className="bg-white text-black text-semibold py-1 px-4 text-lg focus:outline-none border-none">
+        <button className="bg-white text-black font-semibold py-1 px-4 text-lg focus:outline-none border-none">
           Contact Us
         </button>
       </div>
@@ -158,6 +180,32 @@ const App = () => {
         <div>
           <FeaturedWork />
           <FeaturedWork />
+        </div>
+      </div>
+      <div className="px-10 sm:px-12 md:px-16 lg:px-40 flex justify-center">
+        <div className="inline-block bg-gray-100 p-4 shadow-sm w-full">
+          <div className="flex flex-col sm:flex-row justify-center my-6">
+            <input
+              className="sm:w-full focus:outline-none focus:border-gray-400 border-2 border-gray-200 border-solid px-4 py-2 mx-6 my-2 text-lg"
+              placeholder="Name"
+            />
+            <input
+              className="sm:w-full focus:outline-none focus:border-gray-400 border-2 border-gray-200 border-solid px-4 py-2 mx-6 my-2 text-lg"
+              placeholder="Email"
+            />
+          </div>
+          <div className="flex justify-center my-6">
+            <textarea
+              className="w-full font-sans focus:outline-none focus:border-gray-400 border-2 border-gray-200 border-solid px-4 py-2 mx-6 text-lg"
+              placeholder="Description"
+              rows="8"
+            />
+          </div>
+          <div className="mx-6 my-4 flex justify-end">
+            <button className="bg-gray-800 text-white font-semibold py-1 px-10 text-lg focus:outline-none border-none">
+              Send
+            </button>
+          </div>
         </div>
       </div>
       <div>

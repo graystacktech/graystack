@@ -1,4 +1,6 @@
 import { useState } from "react";
+import GlowArt from "./GlowArt";
+import ReceiptHubArt from "./ReceiptHubArt";
 
 const Logo = (props) => {
   return (
@@ -28,6 +30,24 @@ const Logo = (props) => {
         d="M11 33C10.2044 33 9.44129 32.7893 8.87868 32.4142C8.31607 32.0391 8 31.5304 8 31V27C8 26.4696 8.31607 25.9609 8.87868 25.5858C9.44129 25.2107 10.2044 25 11 25H32C32.7956 25 33.5587 25.2107 34.1213 25.5858C34.6839 25.9609 35 26.4696 35 27V31C35 31.5304 34.6839 32.0391 34.1213 32.4142C33.5587 32.7893 32.7956 33 32 33H21.5H11Z"
         stroke-linecap="round"
         stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+const ArrowCircleRight = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+        clipRule="evenodd"
       />
     </svg>
   );
@@ -73,6 +93,14 @@ const XIcon = (props) => {
   );
 };
 
+const Pill = ({ name }) => {
+  return (
+    <span className="bg-blue-600 text-blue-50 px-4 py-1 text-xs uppercase tracking-wider font-bold rounded-full">
+      {name}
+    </span>
+  );
+};
+
 const App = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
@@ -86,7 +114,7 @@ const App = () => {
         <div className="flex justify-between items-center px-8 py-4">
           <div className="flex items-center font-medium md:px-20">
             <span className="flex justify-center items-center rounded-lg">
-              <Logo className="w-8 h-8 lg:w-12 lg:h-12 stroke-2 text-black" />
+              <Logo className="w-8 h-8 lg:w-10 lg:h-10 stroke-2 text-black" />
             </span>
             <span className="ml-2 font-bold text-2xl lg:text-3xl">
               Graystack
@@ -155,7 +183,7 @@ const App = () => {
           <div className="flex-1 flex flex-col items-center lg:items-start px-8 lg:px-24 max-w-md lg:max-w-xl">
             <div className="text-5xl lg:text-6xl font-bold text-center lg:text-left text-black">
               We're a <span className="text-blueGray-500">minutest</span>{" "}
-              company with <span className="text-blueGray-500">elegent</span>{" "}
+              company with <span className="text-blueGray-500">elegant</span>{" "}
               solutions.
             </div>
             <div className="mt-4 text-lg font-base text-center lg:text-left text-gray-600">
@@ -169,6 +197,53 @@ const App = () => {
                 Contact Us
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center pt-12">
+        <div className="flex items-center max-w-3xl py-6">
+          <div className="p-12">
+            <ReceiptHubArt />
+          </div>
+          <div>
+            <div className="py-4 font-semibold text-xl">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div className="flex"></div>
+            <div className="text-lg text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div className="my-6">
+              <button className="flex justify-between items-center bg-white border-1 border-solid border-gray-300 rounded-full pl-4 py-1 font-semibold text-gray-600 text-base">
+                <span className="pr-2">Learn more</span>
+                <ArrowCircleRight className="w-6 h-6 text-gray-400 fill-current" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center max-w-3xl">
+          <div>
+            <div className="py-4 font-semibold text-xl">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div className="text-lg text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div className="my-6">
+              <button className="flex justify-between items-center bg-white border-1 border-solid border-gray-300 rounded-full pl-4 py-1 font-semibold text-gray-600 text-base">
+                <span className="pr-2">Learn more</span>
+                <ArrowCircleRight className="w-6 h-6 text-gray-400 fill-current" />
+              </button>
+            </div>
+          </div>
+          <div className="p-12">
+            <GlowArt />
           </div>
         </div>
       </div>

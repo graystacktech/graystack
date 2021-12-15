@@ -201,11 +201,11 @@ const App = () => {
         </div>
       </div>
       <div className="flex flex-col items-center pt-12">
-        <div className="flex items-center max-w-3xl py-6">
-          <div className="p-12">
+        <div className="grid grid-cols-1 grid-rows-2  lg:grid-cols-4 lg:grid-rows-1 lg:gap-4">
+          <div className="flex p-2 lg:p-12 lg:col-start-1 justify-end  lg:col-span-2">
             <ReceiptHubArt />
           </div>
-          <div>
+          <div className="px-8 lg:px-0 lg:pt-16 lg:col-span-1">
             <div className="py-4 font-semibold text-xl">
               Lorem ipsum dolor sit amet
             </div>
@@ -224,8 +224,8 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center max-w-3xl">
-          <div>
+        <div className="grid grid-cols-1 grid-rows-2  lg:grid-cols-4 lg:grid-rows-1 lg:gap-4">
+          <div className="px-8 lg:px-0 lg:pt-16 lg:col-span-1 lg:col-start-2 justify-end">
             <div className="py-4 font-semibold text-xl">
               Lorem ipsum dolor sit amet
             </div>
@@ -242,7 +242,7 @@ const App = () => {
               </button>
             </div>
           </div>
-          <div className="p-12">
+          <div className="flex p-2 lg:p-12 justify-start lg:col-span-2 lg:order-last order-first">
             <GlowArt />
           </div>
         </div>

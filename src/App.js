@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Art from "./Art";
 import GlowArt from "./GlowArt";
 import ReceiptHubArt from "./ReceiptHubArt";
 
@@ -112,11 +113,11 @@ const App = () => {
     <div className="font-sans">
       <div className="flex flex-col min-h-screen bg-gray-100">
         <div className="flex justify-between items-center px-8 py-4">
-          <div className="flex items-center font-medium md:px-20">
+          <div className="flex font-medium md:px-20">
             <span className="flex justify-center items-center rounded-lg">
               <Logo className="w-8 h-8 lg:w-10 lg:h-10 stroke-2 text-black" />
             </span>
-            <span className="ml-2 font-bold text-2xl lg:text-3xl">
+            <span className="ml-2 font-normal text-2xl lg:text-3xl">
               Graystack
             </span>
           </div>
@@ -128,19 +129,19 @@ const App = () => {
           </div>
           <div className="py-6 px-6 hidden md:block">
             <a
-              className="px-3 text-center no-underline font-bold text-black"
+              className="px-3 text-center no-underline font-medium text-black"
               href="/"
             >
               Portfolio
             </a>
             <a
-              className="px-3 text-center no-underline font-bold text-black"
+              className="px-3 text-center no-underline font-medium text-black"
               href="/"
             >
               Blog
             </a>
             <a
-              className="px-3 text-center no-underline font-bold text-black"
+              className="px-3 text-center no-underline font-medium text-black"
               href="/"
             >
               Contact
@@ -160,19 +161,19 @@ const App = () => {
           </div>
           <div className="flex flex-col py-32">
             <a
-              className="text-center no-underline text-lg py-1 font-bold text-black"
+              className="text-center no-underline text-lg py-1 font-medium text-black"
               href="/"
             >
               Portfolio
             </a>
             <a
-              className="text-center no-underline text-lg py-1 font-bold text-black"
+              className="text-center no-underline text-lg py-1 font-medium text-black"
               href="/"
             >
               Blog
             </a>
             <a
-              className="text-center no-underline text-lg py-1 font-bold text-black"
+              className="text-center no-underline text-lg py-1 font-medium text-black"
               href="/"
             >
               Contact
@@ -181,22 +182,25 @@ const App = () => {
         </div>
         <div className="py-6 flex-1 flex justify-center lg:justify-start items-center">
           <div className="flex-1 flex flex-col items-center lg:items-start px-8 lg:px-24 max-w-md lg:max-w-xl">
-            <div className="text-5xl lg:text-6xl font-bold text-center lg:text-left text-black">
+            <div className="text-5xl lg:text-6xl font-semibold text-center lg:text-left text-black">
               We're a <span className="text-blueGray-500">minutest</span>{" "}
               company with <span className="text-blueGray-500">elegant</span>{" "}
               solutions.
             </div>
-            <div className="mt-4 text-lg font-base text-center lg:text-left text-gray-600">
+            <div className="mt-6 text-xl text-center font-light lg:text-left text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </div>
-            <div className="mt-4">
-              <button className="px-8 py-2 rounded-lg font-medium text-lg border-0 text-white font-sans bg-black">
+            <div className="mt-8">
+              <button className="px-8 py-2 rounded-lg font-light text-lg border-0 text-white font-sans bg-black">
                 Contact Us
               </button>
             </div>
+          </div>
+          <div className="pr-24 hidden lg:block">
+            <Art />
           </div>
         </div>
       </div>
@@ -210,7 +214,7 @@ const App = () => {
               Lorem ipsum dolor sit amet
             </div>
             <div className="flex"></div>
-            <div className="text-lg text-gray-500">
+            <div className="text-lg font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -229,7 +233,7 @@ const App = () => {
             <div className="py-4 font-semibold text-xl">
               Lorem ipsum dolor sit amet
             </div>
-            <div className="text-lg text-gray-500">
+            <div className="text-lg font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

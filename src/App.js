@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Art from "./Art";
-import GlowArt from "./GlowArt";
+import glow from "./glow.png";
 import ReceiptHubArt from "./ReceiptHubArt";
 
 const Logo = (props) => {
@@ -206,7 +206,7 @@ const App = () => {
       </div>
       <div className="flex flex-col items-center pt-12">
         <div className="grid grid-cols-1 grid-rows-2  lg:grid-cols-4 lg:grid-rows-1 lg:gap-4">
-          <div className="flex p-2 lg:p-12 lg:col-start-1 justify-end  lg:col-span-2">
+          <div className="flex p-2 lg:p-12 lg:col-start-1 justify-center lg:justify-end lg:col-span-2">
             <ReceiptHubArt />
           </div>
           <div className="px-8 lg:px-0 lg:pt-16 lg:col-span-1">
@@ -246,8 +246,8 @@ const App = () => {
               </button>
             </div>
           </div>
-          <div className="flex p-2 lg:p-12 justify-start lg:col-span-2 lg:order-last order-first">
-            <GlowArt />
+          <div className="flex p-2 lg:p-12 justify-center lg:justify-start lg:col-span-2 lg:order-last order-first">
+            <img src={glow} alt="Glow" width={500} />
           </div>
         </div>
       </div>
